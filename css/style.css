@@ -207,9 +207,12 @@ dd {
 }
 .content-business__list .list-link .list-item-img {
   display: block;
-  width: 294px;
+  width: 100%;
   height: 192px;
   overflow: hidden;
+}
+.content-business__list .list-link .list-item-img .item-img {
+  width: 100%;
 }
 .content-business__list .list-link .list-text__wrap {
   height: 171px;
@@ -238,7 +241,7 @@ dd {
   margin-top: 40px;
 }
 .works__contet .works__image-wrap {
-  width: 295px;
+  width: 100%;
   height: 221px;
   overflow: hidden;
 }
