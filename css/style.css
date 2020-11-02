@@ -113,7 +113,7 @@ dd {
   height: 22px;
   position: absolute;
   top: 15px;
-  right: 6px;
+  right: -1px;
 }
 
 .header__wrap {
