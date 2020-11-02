@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+.header__nav {
+  display: none;
+}
+
+.sp-humburger {
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  top: 33px;
+  right: 20px;
+  display: block;
+  box-sizing: content-box;
+  width: 24px;
+}
+.sp-humburger .screen-reader-text {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+.sp-humburger .drawer-hamburger-icon {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+.sp-humburger .drawer-hamburger-icon::before {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  content: " ";
+}
+.sp-humburger .drawer-hamburger-icon::after {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  content: " ";
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.bg-main-color {
+  background-color: #2c4087;
+}
+
+.bg-sub-color01 {
+  background-color: #f7fCfd;
+}
+
+.bg-sub-color02 {
+  background-color: #fafafa;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+p,
+dd {
+  color: #6f7579;
+  line-height: 1.5;
+  font-size: 0.875em;
+}
+@media screen and (min-width: 776px) {
+  p,
+dd {
+    line-height: 1.9;
+  }
+}
+
+.text-blue {
+  color: #1189c6;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.btn {
+  border: 2px solid #1189c6;
+  border-radius: 4px;
+  width: 242px;
+  height: 48px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.btn .btn-content {
+  color: #1189c6;
+  font-weight: bold;
+  font-size: 0.75em;
+}
+.btn .btn-content::after {
+  background: url(/ootomi-kensetsu/img/arrow.svg) no-repeat;
+  content: " ";
+  width: 20px;
+  height: 22px;
+  position: absolute;
+  top: 15px;
+  right: 6px;
+}
+
+.header__wrap {
+  background-color: #2c4087;
+  display: flex;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.header__wrap .header__content {
+  padding: 24px 20px;
+}
+
+.header__content .header__link {
+  color: #fff;
+}
+.header__content .header__logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.main-image {
+  background-image: url("/ootomi-kensetsu/img/main-sp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 640px;
+}
+@media screen and (min-width: 776px) {
+  .main-image {
+    background: url("/ootomi-kensetsu/img/main-pc.jpg") center/cover;
+    background-position: center;
+  }
+}
+
+.main-text {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.58;
+  padding: 190px 20px 0;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.main__contents {
+  padding: 0 40px 100px;
+}
+
+.content__title {
+  padding-top: 60px;
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: bold;
+  color: #53585c;
+  letter-spacing: 0.08em;
+}
+.content__title .sub-title {
+  display: block;
+  font-size: 0.583em;
+  font-weight: normal;
+  margin-bottom: 5px;
+  letter-spacing: 0;
+}
+
+.secondary-text {
+  text-align: center;
+  font-size: 0.875em;
+  margin-top: 20px;
+}
+.secondary-text span {
+  display: block;
+}
+
+.business-content__wrap {
+  background: url("/ootomi-kensetsu/img/bg-business-sp.png") no-repeat 50% 30px;
+}
+
+.content-business__list {
+  margin-top: 40px;
+}
+.content-business__list .business__list-item {
+  border: 1px solid #b8bcBf;
+}
+.content-business__list .business__list-item:not(:first-child) {
+  margin-top: 20px;
+}
+.content-business__list .list-link {
+  display: block;
+}
+.content-business__list .list-link .list-item-img {
+  display: block;
+  width: 294px;
+  height: 192px;
+  overflow: hidden;
+}
+.content-business__list .list-link .list-text__wrap {
+  height: 171px;
+}
+.content-business__list .list-link .list-content-text {
+  padding: 0 15px;
+  text-align: center;
+}
+.content-business__list .list-link .list-content-text .list-content-text__title {
+  font-size: 1.125em;
+  color: #53585c;
+  font-weight: bold;
+  padding-top: 35px;
+}
+.content-business__list .list-link .list-content-text .list-content-text__text {
+  font-size: 0.875em;
+  margin-top: 10px;
+}
+
+.works-content__wrap {
+  background: url("/ootomi-kensetsu/img/bg-works-sp.png") no-repeat 50% 100%;
+  margin-bottom: 40px;
+}
+
+.works__contet {
+  margin-top: 40px;
+}
+.works__contet .works__image-wrap {
+  width: 295px;
+  height: 221px;
+  overflow: hidden;
+}
+.works__contet .works__image-wrap .works__image {
+  width: 100%;
+  object-fit: cover;
+}
+.works__contet .works__text {
+  margin-top: 30px;
+}
+.works__contet .works__text__day {
+  color: #6f7579;
+  text-align: center;
+}
+.works__contet .works__text__label {
+  background-color: #b91414;
+  color: #fff;
+  font-weight: bold;
+  padding: 0 15px 2px;
+  margin-right: 10px;
+}
+.works__contet .works__text__details {
+  margin-top: 20px;
+}
+.works__contet .btn {
+  margin-top: 40px;
+}
+
+.news__content {
+  margin-top: 40px;
+  padding-bottom: 50px;
+}
+.news__content .news__link {
+  color: #707070;
+  display: block;
+}
+.news__content .news__link:not(:first-child) {
+  margin-top: 20px;
+}
+.news__content .news__definition-list {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #707070;
+}
+.news__content .news__definition-list .news__definition-text {
+  margin-top: 10px;
+}
+
+.bg-image-okinawa {
+  background: url("/ootomi-kensetsu/img/bg-footer-sp.jpg") no-repeat;
+  content: "";
+  height: 311px;
+}
+.bg-image-okinawa .screen-reader-text {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.contact__content {
+  margin-top: 40px;
+  text-align: center;
+}
+.contact__content .contact__definition-list {
+  width: 260px;
+  margin: 0 auto;
+}
+.contact__content .contact__definition-tel {
+  font-size: 1.5em;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #707070;
+}
+.contact__content .contact__definition-tel .contact-link {
+  color: #53585c;
+  font-weight: bold;
+}
+.contact__content .contact__definition-tel .contact-link::before {
+  background: url(/ootomi-kensetsu/img/icon-tel.svg) no-repeat;
+  content: " ";
+  display: inline-block;
+  padding-right: 10px;
+  position: relative;
+  top: 1px;
+  width: 31px;
+  height: 23px;
+}
+.contact__content .contact__definition-text {
+  padding-top: 10px;
+}
+.contact__content .btn {
+  margin-top: 40px;
+}
+
+.footer-content {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-content .footer__copy-right {
+  padding-top: 3px;
+}
+.footer-content .footer__sns {
+  display: flex;
+}
+.footer-content .footer__sns__icon:not(:first-child) {
+  margin-left: 30px;
+}

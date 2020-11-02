@@ -1,0 +1,330 @@
+//////////////////////////
+// import
+//////////////////////////
+@import "drawer/drawer";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+//////////////////////////
+// mixin
+//////////////////////////
+@mixin sp {
+  @media screen and (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media screen and (min-width: 776px) {
+    @content;
+  }
+}
+
+//////////////////////////
+// common
+//////////////////////////
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+// 背景色の設定
+.bg-main-color {
+  background-color: #2c4087;
+}
+
+.bg-sub-color01 {
+  background-color: #f7fCfd;
+}
+
+.bg-sub-color02 {
+  background-color: #fafafa;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+// 文字の設定
+p,
+dd {
+  color: #6f7579;
+  line-height: 1.5;
+  font-size: 0.875em;
+  @include pc {
+    line-height: 1.9;
+  }
+}
+
+.text-blue {
+  color: #1189c6;
+}
+.text-white {
+  color: #fff;
+}
+
+// ボタンの設定
+.btn {
+  border: 2px solid #1189c6;
+  border-radius: 4px;
+  width: 242px;
+  height: 48px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .btn-content {
+    color: #1189c6;
+    font-weight: bold;
+    font-size: 0.75em;
+    &::after {
+      background: url(/ootomi-kensetsu/img/arrow.svg) no-repeat;
+      content: ' ';
+      width: 20px;
+      height: 22px;
+      position: absolute;
+      top: 15px;
+      right: 6px;
+    }
+  }
+}
+
+//////////////////////////
+// home
+//////////////////////////
+
+//header
+.header__wrap {
+  background-color: #2c4087;
+  display: flex;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  .header__content {
+    padding: 24px 20px;
+  }
+}
+.header__content {
+  .header__link {
+    color: #fff;
+  }
+  .header__logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+}
+
+//メイン画像
+.main-image {
+  background-image: url("/ootomi-kensetsu/img/main-sp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 640px;
+  @include pc {
+    background: url("/ootomi-kensetsu/img/main-pc.jpg") center / cover;
+    background-position: center;
+  }
+}
+
+.main-text {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.58;
+  padding: 190px 20px 0;
+  text-shadow: 0 3px 6px rgba($color: #000, $alpha: .16);
+}
+
+//TOPコンテンツ
+.main__contents {
+  padding: 0 40px 100px;
+}
+
+.content__title {
+  padding-top: 60px;
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: bold;
+  color: #53585c;
+  letter-spacing: 0.08em;
+  .sub-title {
+    display: block;
+    font-size: 0.583em;
+    font-weight: normal;
+    margin-bottom: 5px;
+    letter-spacing: 0;
+  }
+}
+.secondary-text {
+  text-align: center;
+  font-size: 0.875em;
+  margin-top: 20px;
+  span {
+    display: block;
+  }
+}
+
+//事業紹介
+.business-content__wrap {
+  background: url("/ootomi-kensetsu/img/bg-business-sp.png") no-repeat 50% 30px;
+}
+.content-business__list {
+  margin-top: 40px;
+  .business__list-item {
+    border: 1px solid #b8bcBf;
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+  .list-link {
+    display: block;
+    .list-item-img {
+      display: block;
+      width: 294px;
+      height: 192px;
+      overflow: hidden;
+    }
+    .list-text__wrap {
+      height: 171px;
+    }
+    .list-content-text {
+      padding: 0 15px;
+      text-align: center;
+      .list-content-text__title {
+        font-size: 1.125em;
+        color: #53585c;
+        font-weight: bold;
+        padding-top: 35px;
+      }
+      .list-content-text__text {
+        font-size: 0.875em;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+//実績
+.works-content__wrap{
+  background: url("/ootomi-kensetsu/img/bg-works-sp.png") no-repeat 50% 100%;
+  margin-bottom: 40px;
+}
+.works__contet {
+  margin-top: 40px;
+  .works__image-wrap {
+    width: 295px;
+    height: 221px;
+    overflow: hidden;
+    .works__image {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .works__text {
+    margin-top: 30px;
+  }
+  .works__text__day {
+    color: #6f7579;
+    text-align: center;
+  }
+  .works__text__label {
+    background-color: #b91414;
+    color: #fff;
+    font-weight: bold;
+    padding: 0 15px 2px;
+    margin-right: 10px;
+  }
+  .works__text__details {
+    margin-top: 20px;
+  }
+  .btn {
+    margin-top: 40px;
+  }
+}
+
+//ニュース
+.news__content {
+  margin-top: 40px;
+  padding-bottom: 50px;
+  .news__link {
+    color: #707070;
+    display: block;
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+  .news__definition-list {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #707070;
+    .news__definition-text {
+      margin-top: 10px;
+    }
+  }
+}
+
+//沖縄の背景画像
+.bg-image-okinawa {
+  background: url("/ootomi-kensetsu/img/bg-footer-sp.jpg") no-repeat;
+  content: '';
+  height: 311px;
+  .screen-reader-text {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+}
+
+//お問い合わせ
+.contact__content {
+  margin-top: 40px;
+  text-align: center;
+  .contact__definition-list {
+    width: 260px;
+    margin: 0 auto;
+  }
+  .contact__definition-tel {
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #707070;
+    .contact-link {
+      color: #53585c;
+      font-weight: bold;
+      &::before {
+        background: url(/ootomi-kensetsu/img/icon-tel.svg) no-repeat;
+        content: ' ';
+        display: inline-block;
+        padding-right: 10px;
+        position: relative;
+        top: 1px;
+        width: 31px;
+        height: 23px;
+      }
+    }
+  }
+  .contact__definition-text {
+    padding-top: 10px;
+  }
+  .btn {
+    margin-top: 40px;
+  }
+}
+
+//footer
+.footer-content {
+  .footer__copy-right {
+    padding-top: 3px;
+  }
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  .footer__sns {
+    display: flex;
+  }
+  .footer__sns__icon {
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+}
