@@ -19,20 +19,20 @@
 <body>
   <header class="header__wrap">
     <div class="header__content">
-      <h1 class="header__logo"><a class="header__link" href="index.html">合同会社〇〇</a></h1>
-      <nav class="header__nav">
-        <ul>
-          <li><a class="header__link" href="#">事業紹介</a></li>
-          <li><a class="header__link"  href="#">会社概要</a></li>
-          <li><a class="header__link"  href="#">実績</a></li>
-          <li><a class="header__link"  href="#">ニュース</a></li>
-          <li><a class="header__link"  href="#">お問い合わせ</a></li>
+      <h1 class="header__logo"><a class="text-white" href="index.html">合同会社大富建設</a></h1>
+      <nav class="header__nav" id="hederNav">
+        <ul class="header__nav__list">
+          <li class="nav__list-ltem"><a class="header__link" href="#">事業紹介</a></li>
+          <li class="nav__list-ltem"><a class="header__link"  href="#">会社概要</a></li>
+          <li class="nav__list-ltem"><a class="header__link"  href="#">実績</a></li>
+          <li class="nav__list-ltem"><a class="header__link"  href="#">ニュース</a></li>
+          <li class="nav__list-ltem"><a class="header__link"  href="#">お問い合わせ</a></li>
         </ul>
       </nav>
       <!-- ハンバーガーメニュー -->
       <button type="button" id="nav-btn" class="sp-humburger">
         <span class="screen-reader-text">menuButton</span>
-        <span class="drawer-hamburger-icon"></span>
+        <span class="drawer-hamburger-icon" id="hamburger"></span>
       </button>
     </div>
   </header>
@@ -163,5 +163,6 @@
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="/ootomi-kensetsu/js/drawer.js"></script>
 </body>
 </html>
