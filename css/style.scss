@@ -207,7 +207,7 @@ dd {
 .business-content__wrap {
   background: url("/ootomi-kensetsu/img/bg-business-sp.png") no-repeat 50% 30px;
   background-color: #f7fCfd;
-  @include tablet {
+  @include pc {
     background: url("/ootomi-kensetsu/img/bg-business-pc.png") no-repeat 50% 40px;
     background-color: #f7fCfd;
   }
@@ -260,13 +260,25 @@ dd {
 .works-content__wrap{
   background: url("/ootomi-kensetsu/img/bg-works-sp.png") no-repeat 50% 100%;
   margin-bottom: 40px;
+  @include pc {
+    background: url("/ootomi-kensetsu/img/bg-works-pc.png") no-repeat 50% 100%;
+  }
 }
 .works__contet {
   margin-top: 40px;
+  @include pc {
+    display: flex;
+  }
   .works__image-wrap {
-    width: 100%;
+    width: 295px;
     height: 221px;
+    margin: 0 auto;
     overflow: hidden;
+    @include pc {
+      width: 100%;
+      height: 348px;
+      margin-right: 40px;
+    }
     .works__image {
       width: 100%;
       object-fit: cover;
@@ -274,10 +286,19 @@ dd {
   }
   .works__text {
     margin-top: 30px;
+    @include pc {
+      margin-top: -33px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   .works__text__day {
     color: #6f7579;
     text-align: center;
+    @include pc {
+      text-align: left;
+    }
   }
   .works__text__label {
     background-color: #b91414;
@@ -291,6 +312,9 @@ dd {
   }
   .btn {
     margin-top: 40px;
+    @include pc {
+      margin-left: 0;
+    }
   }
 }
 
@@ -298,6 +322,10 @@ dd {
 .news__content {
   margin-top: 40px;
   padding-bottom: 50px;
+  @include pc {
+    width: 700px;
+    margin: 40px auto 0;
+  }
   .news__link {
     color: #707070;
     display: block;
@@ -310,6 +338,9 @@ dd {
     border-bottom: 1px solid #707070;
     .news__definition-text {
       margin-top: 10px;
+      @include pc {
+        margin-top: 0;
+      }
     }
   }
 }

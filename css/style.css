@@ -322,7 +322,7 @@ dd {
   background: url("/ootomi-kensetsu/img/bg-business-sp.png") no-repeat 50% 30px;
   background-color: #f7fCfd;
 }
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 1000px) {
   .business-content__wrap {
     background: url("/ootomi-kensetsu/img/bg-business-pc.png") no-repeat 50% 40px;
     background-color: #f7fCfd;
@@ -383,14 +383,32 @@ dd {
   background: url("/ootomi-kensetsu/img/bg-works-sp.png") no-repeat 50% 100%;
   margin-bottom: 40px;
 }
+@media screen and (min-width: 1000px) {
+  .works-content__wrap {
+    background: url("/ootomi-kensetsu/img/bg-works-pc.png") no-repeat 50% 100%;
+  }
+}
 
 .works__contet {
   margin-top: 40px;
 }
+@media screen and (min-width: 1000px) {
+  .works__contet {
+    display: flex;
+  }
+}
 .works__contet .works__image-wrap {
-  width: 100%;
+  width: 295px;
   height: 221px;
+  margin: 0 auto;
   overflow: hidden;
+}
+@media screen and (min-width: 1000px) {
+  .works__contet .works__image-wrap {
+    width: 100%;
+    height: 348px;
+    margin-right: 40px;
+  }
 }
 .works__contet .works__image-wrap .works__image {
   width: 100%;
@@ -399,9 +417,22 @@ dd {
 .works__contet .works__text {
   margin-top: 30px;
 }
+@media screen and (min-width: 1000px) {
+  .works__contet .works__text {
+    margin-top: -33px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .works__contet .works__text__day {
   color: #6f7579;
   text-align: center;
+}
+@media screen and (min-width: 1000px) {
+  .works__contet .works__text__day {
+    text-align: left;
+  }
 }
 .works__contet .works__text__label {
   background-color: #b91414;
@@ -416,10 +447,21 @@ dd {
 .works__contet .btn {
   margin-top: 40px;
 }
+@media screen and (min-width: 1000px) {
+  .works__contet .btn {
+    margin-left: 0;
+  }
+}
 
 .news__content {
   margin-top: 40px;
   padding-bottom: 50px;
+}
+@media screen and (min-width: 1000px) {
+  .news__content {
+    width: 700px;
+    margin: 40px auto 0;
+  }
 }
 .news__content .news__link {
   color: #707070;
@@ -434,6 +476,11 @@ dd {
 }
 .news__content .news__definition-list .news__definition-text {
   margin-top: 10px;
+}
+@media screen and (min-width: 1000px) {
+  .news__content .news__definition-list .news__definition-text {
+    margin-top: 0;
+  }
 }
 
 .bg-image-okinawa {
