@@ -8,19 +8,13 @@
 }
 
 @mixin tablet {
-  @media screen and (min-width:560px) and (max-width:1000px) {
+  @media screen and (min-width:560px) {
     @content;
   }
 }
 
 @mixin pc {
   @media screen and (min-width: 1000px) {
-    @content;
-  }
-}
-
-@mixin tab-pc {
-  @media screen and (min-width: 760px) {
     @content;
   }
 }
@@ -213,25 +207,25 @@ dd {
 .business-content__wrap {
   background: url("/ootomi-kensetsu/img/bg-business-sp.png") no-repeat 50% 30px;
   background-color: #f7fCfd;
-  @include tab-pc {
+  @include tablet {
     background: url("/ootomi-kensetsu/img/bg-business-pc.png") no-repeat 50% 40px;
     background-color: #f7fCfd;
   }
 }
 .content-business__list {
   margin-top: 40px;
-  @include tab-pc {
+  @include tablet {
     display: flex;
     justify-content: space-between;
   }
   .business__list-item {
     border: 1px solid #b8bcBf;
-    @include tab-pc {
+    @include tablet {
       width: calc((100% / 3) - 20px);
     }
     &:not(:first-child) {
       margin-top: 20px;
-      @include tab-pc {
+      @include tablet {
         margin-top: 0;
       }
     }
@@ -241,23 +235,18 @@ dd {
     .list-item-img {
       display: block;
       width: 100%;
-      height: 192px;
       overflow: hidden;
       .item-img {
         width: 100%;
       }
     }
-    .list-text__wrap {
-      height: 171px;
-    }
     .list-content-text {
-      padding: 0 15px;
+      padding: 35px 15px;
       text-align: center;
       .list-content-text__title {
         font-size: 1.125em;
         color: #53585c;
         font-weight: bold;
-        padding-top: 35px;
       }
       .list-content-text__text {
         font-size: 0.875em;

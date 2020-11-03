@@ -322,7 +322,7 @@ dd {
   background: url("/ootomi-kensetsu/img/bg-business-sp.png") no-repeat 50% 30px;
   background-color: #f7fCfd;
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 560px) {
   .business-content__wrap {
     background: url("/ootomi-kensetsu/img/bg-business-pc.png") no-repeat 50% 40px;
     background-color: #f7fCfd;
@@ -332,7 +332,7 @@ dd {
 .content-business__list {
   margin-top: 40px;
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 560px) {
   .content-business__list {
     display: flex;
     justify-content: space-between;
@@ -341,7 +341,7 @@ dd {
 .content-business__list .business__list-item {
   border: 1px solid #b8bcBf;
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 560px) {
   .content-business__list .business__list-item {
     width: calc((100% / 3) - 20px);
   }
@@ -349,7 +349,7 @@ dd {
 .content-business__list .business__list-item:not(:first-child) {
   margin-top: 20px;
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 560px) {
   .content-business__list .business__list-item:not(:first-child) {
     margin-top: 0;
   }
@@ -360,24 +360,19 @@ dd {
 .content-business__list .list-link .list-item-img {
   display: block;
   width: 100%;
-  height: 192px;
   overflow: hidden;
 }
 .content-business__list .list-link .list-item-img .item-img {
   width: 100%;
 }
-.content-business__list .list-link .list-text__wrap {
-  height: 171px;
-}
 .content-business__list .list-link .list-content-text {
-  padding: 0 15px;
+  padding: 35px 15px;
   text-align: center;
 }
 .content-business__list .list-link .list-content-text .list-content-text__title {
   font-size: 1.125em;
   color: #53585c;
   font-weight: bold;
-  padding-top: 35px;
 }
 .content-business__list .list-link .list-content-text .list-content-text__text {
   font-size: 0.875em;
