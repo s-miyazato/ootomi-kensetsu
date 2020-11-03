@@ -372,9 +372,18 @@ dd {
 .contact__content {
   margin-top: 40px;
   text-align: center;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    width: 610px;
+    margin: 40px auto 0;
+  }
   .contact__definition-list {
     width: 260px;
     margin: 0 auto;
+    @include tablet {
+      width: 280px;
+    }
   }
   .contact__definition-tel {
     font-size: 1.5em;
@@ -400,6 +409,9 @@ dd {
   }
   .btn {
     margin-top: 40px;
+    @include tablet {
+      margin: 8px 0 0;
+    }
   }
 }
 

@@ -511,9 +511,22 @@ dd {
   margin-top: 40px;
   text-align: center;
 }
+@media screen and (min-width: 560px) {
+  .contact__content {
+    display: flex;
+    justify-content: space-between;
+    width: 610px;
+    margin: 40px auto 0;
+  }
+}
 .contact__content .contact__definition-list {
   width: 260px;
   margin: 0 auto;
+}
+@media screen and (min-width: 560px) {
+  .contact__content .contact__definition-list {
+    width: 280px;
+  }
 }
 .contact__content .contact__definition-tel {
   font-size: 1.5em;
@@ -539,6 +552,11 @@ dd {
 }
 .contact__content .btn {
   margin-top: 40px;
+}
+@media screen and (min-width: 560px) {
+  .contact__content .btn {
+    margin: 8px 0 0;
+  }
 }
 
 .footer-content {
