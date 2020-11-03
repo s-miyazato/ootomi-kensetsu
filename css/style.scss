@@ -417,12 +417,17 @@ dd {
 
 //footer
 .footer-content {
-  .footer__copy-right {
-    padding-top: 3px;
-  }
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
+  @include tablet {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  .footer__copy-right {
+    padding-top: 3px;
+  }
   .footer__sns {
     display: flex;
   }

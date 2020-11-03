@@ -564,6 +564,13 @@ dd {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (min-width: 560px) {
+  .footer-content {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+}
 .footer-content .footer__copy-right {
   padding-top: 3px;
 }
