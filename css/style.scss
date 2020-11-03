@@ -193,11 +193,18 @@ dd {
   margin-top: 20px;
   @include pc  {
     font-size: 1em;
+    margin-top: 40px;
   }
-  span {
+  .indention-sp {
     display: block;
     @include pc {
       display: inline;
+    }
+  }
+  .indention-pc {
+    display: none;
+    @include pc {
+      display: block;
     }
   }
 }

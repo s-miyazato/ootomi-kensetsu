@@ -298,14 +298,23 @@ dd {
 @media screen and (min-width: 1000px) {
   .secondary-text {
     font-size: 1em;
+    margin-top: 40px;
   }
 }
-.secondary-text span {
+.secondary-text .indention-sp {
   display: block;
 }
 @media screen and (min-width: 1000px) {
-  .secondary-text span {
+  .secondary-text .indention-sp {
     display: inline;
+  }
+}
+.secondary-text .indention-pc {
+  display: none;
+}
+@media screen and (min-width: 1000px) {
+  .secondary-text .indention-pc {
+    display: block;
   }
 }
 
