@@ -51,13 +51,16 @@ body {
 // 文字の設定
 p,
 dd {
-  color: #6f7579;
   line-height: 1.5;
   font-size: 0.875em;
   @include pc {
     line-height: 1.9;
     font-size: 1em;
   }
+}
+
+p {
+  color: #6f7579;
 }
 
 .text-blue {
@@ -82,6 +85,9 @@ dd {
     color: #1189c6;
     font-weight: bold;
     font-size: 0.75em;
+    width: 100%;
+    display: block;
+    text-align: center;
     &::after {
       background: url(/ootomi-kensetsu/img/arrow.svg) no-repeat;
       content: ' ';
@@ -240,16 +246,17 @@ dd {
         width: 100%;
       }
     }
-    .list-content-text {
+    .business__definition-list{
       padding: 35px 15px;
       text-align: center;
-      .list-content-text__title {
+      .business__definition__title{
         font-size: 1.125em;
         color: #53585c;
         font-weight: bold;
       }
-      .list-content-text__text {
+      .business__definition__text {
         font-size: 0.875em;
+        color: #6f7579;
         margin-top: 10px;
       }
     }
@@ -329,6 +336,7 @@ dd {
   .news__link {
     color: #707070;
     display: block;
+    width: 100%;
     &:not(:first-child) {
       margin-top: 20px;
     }
@@ -336,6 +344,9 @@ dd {
   .news__definition-list {
     padding-bottom: 15px;
     border-bottom: 1px solid #707070;
+    &:hover {
+      color: #1189c6;
+    }
     .news__definition-day {
       @include pc {
         display: inline;
