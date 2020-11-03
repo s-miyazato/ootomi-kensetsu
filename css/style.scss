@@ -1,24 +1,35 @@
 //////////////////////////
-// import
-//////////////////////////
-@import "drawer/drawer";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
-
-//////////////////////////
 // mixin
 //////////////////////////
 @mixin sp {
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 560px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width:560px) and (max-width:1000px) {
     @content;
   }
 }
 
 @mixin pc {
-  @media screen and (min-width: 776px) {
+  @media screen and (min-width: 1000px) {
     @content;
   }
 }
 
+@mixin tab-pc {
+  @media screen and (min-width: 760px) {
+    @content;
+  }
+}
+
+//////////////////////////
+// import
+//////////////////////////
+@import "drawer/drawer";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 //////////////////////////
 // common
 //////////////////////////
@@ -51,6 +62,7 @@ dd {
   font-size: 0.875em;
   @include pc {
     line-height: 1.9;
+    font-size: 1.143em;
   }
 }
 
@@ -104,6 +116,12 @@ dd {
   z-index: 1000;
   .header__content {
     padding: 24px 20px;
+    @include pc {
+      width: 1000px;
+      display: flex;
+      margin: 0 auto;
+      padding: 24px 0;
+    }
   }
 }
 .header__content {
@@ -132,11 +150,22 @@ dd {
   line-height: 1.58;
   padding: 190px 20px 0;
   text-shadow: 0 3px 6px rgba($color: #000, $alpha: .16);
+  @include pc {
+    width: 1000px;
+    height: 893px;
+    margin: 0 auto;
+    font-size: 2.042em;
+  }
 }
 
 //TOPコンテンツ
 .main__contents {
   padding: 0 40px 100px;
+  @include pc {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 0 100px;
+  }
 }
 
 .content__title {
@@ -146,6 +175,10 @@ dd {
   font-weight: bold;
   color: #53585c;
   letter-spacing: 0.08em;
+  @include pc {
+    padding-top: 90px;
+    font-size: 2.083em;
+  }
   .sub-title {
     display: block;
     font-size: 0.583em;
@@ -158,21 +191,42 @@ dd {
   text-align: center;
   font-size: 0.875em;
   margin-top: 20px;
+  @include pc  {
+    font-size: 1em;
+  }
   span {
     display: block;
+    @include pc {
+      display: inline;
+    }
   }
 }
 
 //事業紹介
 .business-content__wrap {
   background: url("/ootomi-kensetsu/img/bg-business-sp.png") no-repeat 50% 30px;
+  background-color: #f7fCfd;
+  @include tab-pc {
+    background: url("/ootomi-kensetsu/img/bg-business-pc.png") no-repeat 50% 40px;
+    background-color: #f7fCfd;
+  }
 }
 .content-business__list {
   margin-top: 40px;
+  @include tab-pc {
+    display: flex;
+    justify-content: space-between;
+  }
   .business__list-item {
     border: 1px solid #b8bcBf;
+    @include tab-pc {
+      width: calc((100% / 3) - 20px);
+    }
     &:not(:first-child) {
       margin-top: 20px;
+      @include tab-pc {
+        margin-top: 0;
+      }
     }
   }
   .list-link {
