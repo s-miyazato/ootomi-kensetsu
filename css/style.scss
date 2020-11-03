@@ -357,6 +357,10 @@ dd {
   background: url("/ootomi-kensetsu/img/bg-footer-sp.jpg") no-repeat;
   content: '';
   height: 311px;
+  @include tablet {
+    background: url("/ootomi-kensetsu/img/bg-footer-pc.jpg") no-repeat;
+    height: 539px;
+  }
   .screen-reader-text {
     position: absolute;
     overflow: hidden;

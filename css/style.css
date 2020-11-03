@@ -495,6 +495,12 @@ dd {
   content: "";
   height: 311px;
 }
+@media screen and (min-width: 560px) {
+  .bg-image-okinawa {
+    background: url("/ootomi-kensetsu/img/bg-footer-pc.jpg") no-repeat;
+    height: 539px;
+  }
+}
 .bg-image-okinawa .screen-reader-text {
   position: absolute;
   overflow: hidden;
