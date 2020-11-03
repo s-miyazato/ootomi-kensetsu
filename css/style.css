@@ -474,11 +474,18 @@ dd {
   padding-bottom: 15px;
   border-bottom: 1px solid #707070;
 }
+@media screen and (min-width: 1000px) {
+  .news__content .news__definition-list .news__definition-day {
+    display: inline;
+    margin-right: 60px;
+  }
+}
 .news__content .news__definition-list .news__definition-text {
   margin-top: 10px;
 }
 @media screen and (min-width: 1000px) {
   .news__content .news__definition-list .news__definition-text {
+    display: inline;
     margin-top: 0;
   }
 }
