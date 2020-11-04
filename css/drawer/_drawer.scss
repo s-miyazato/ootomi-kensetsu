@@ -29,6 +29,9 @@
   .nav__list-ltem {
     padding: 25px 20px;
     transition: all .5s;
+    @include pc {
+      padding: 5px 0 0;
+    }
   }
   .header__link {
     color:  #2c4087;

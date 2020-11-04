@@ -7,3 +7,7 @@ $(function() {
     $(this).toggleClass('drawer-hamburger-close');
   });
 });
+
+var rellax = new Rellax('.rellax', {
+  center: true,
+});
