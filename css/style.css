@@ -64,6 +64,13 @@
   transform-origin: left top;
   transition: transform 0.3s;
 }
+@media screen and (min-width: 1000px) {
+  .header__nav .header__link::after {
+    height: 2px;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+  }
+}
 .header__nav .header__link:hover::after {
   transform: scale(1, 1);
 }

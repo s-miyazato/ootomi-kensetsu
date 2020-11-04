@@ -52,6 +52,11 @@
       transform: scale(0, 1);
       transform-origin: left top;
       transition: transform .3s;
+      @include pc {
+        height: 2px;
+        background: #fff;
+        box-shadow: 0 3px 6px rgba($color: #000, $alpha: .5);
+      }
     }
     &:hover::after {
       transform: scale(1, 1);

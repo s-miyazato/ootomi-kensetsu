@@ -9,10 +9,10 @@ $(function() {
   });
 
   //PC_header backdround-color、text-shadowの変更
-  var headerVh = $('header').height();
+  const headerVh = $('header').height();
 
   $(window).scroll(function() {
-    var top = $(window).scrollTop();
+    const top = $(window).scrollTop();
     if (headerVh < top) {
       $('.header__wrap').css('background-color', 'rgba(44,64,135,1)').css('text-shadow', 'none');
       } else {
