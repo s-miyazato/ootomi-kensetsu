@@ -113,6 +113,10 @@ p {
   top: 0;
   left: 0;
   z-index: 1000;
+  @include pc {
+    background-color: rgba($color: #2c4087, $alpha: 0);
+    text-shadow: 0 3px 6px rgba($color: #000, $alpha: .5);
+  }
   .header__content {
     padding: 24px 20px;
     @include pc {
