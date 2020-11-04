@@ -81,12 +81,35 @@ p {
   .btn-content {
     color: #1189c6;
     font-weight: bold;
-    font-size: 0.75em;
+    font-size: 0.8em;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    &:hover {
+      color: #fff;
+      transition: transform .3s;
+    }
+    &::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: scale(0, 1);
+      transform-origin: left top;
+      width: 100%;
+      height: 100%;
+      background-color: #1189c6;
+      z-index: -100;
+      content: "";
+      transition: transform .3s;
+    }
+    &:hover::before {
+      transform: scale(1, 1);
+    }
     &::after {
       background: url(/ootomi-kensetsu/img/arrow.svg) no-repeat;
       content: ' ';
@@ -94,7 +117,17 @@ p {
       height: 22px;
       position: absolute;
       top: 15px;
-      right: -1px;
+      right: 3px;
+    }
+    &:hover::after {
+      background: url(/ootomi-kensetsu/img/arrow-white.svg) no-repeat;
+      content: ' ';
+      width: 20px;
+      height: 22px;
+      position: absolute;
+      top: 15px;
+      right: 3px;
+      transition: transform .3s;
     }
   }
 }
@@ -143,7 +176,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   height: 640px;
-  @include pc {
+  @include tablet {
     background: url("/ootomi-kensetsu/img/main-pc.jpg") center / cover;
     background-position: center;
     background-attachment: fixed;
@@ -243,9 +276,6 @@ p {
         margin-top: 0;
       }
     }
-  }
-  .list-link {
-    display: block;
     .list-item-img {
       display: block;
       width: 100%;
@@ -278,6 +308,7 @@ p {
   margin-bottom: 40px;
   @include pc {
     background: url("/ootomi-kensetsu/img/bg-works-pc.png") no-repeat 50% 100%;
+    margin-bottom: 0;
     background-attachment: fixed;
   }
 }

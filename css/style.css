@@ -201,12 +201,35 @@ p {
 .btn .btn-content {
   color: #1189c6;
   font-weight: bold;
-  font-size: 0.75em;
+  font-size: 0.8em;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.btn .btn-content:hover {
+  color: #fff;
+  transition: transform 0.3s;
+}
+.btn .btn-content::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  width: 100%;
+  height: 100%;
+  background-color: #1189c6;
+  z-index: -100;
+  content: "";
+  transition: transform 0.3s;
+}
+.btn .btn-content:hover::before {
+  transform: scale(1, 1);
 }
 .btn .btn-content::after {
   background: url(/ootomi-kensetsu/img/arrow.svg) no-repeat;
@@ -215,7 +238,17 @@ p {
   height: 22px;
   position: absolute;
   top: 15px;
-  right: -1px;
+  right: 3px;
+}
+.btn .btn-content:hover::after {
+  background: url(/ootomi-kensetsu/img/arrow-white.svg) no-repeat;
+  content: " ";
+  width: 20px;
+  height: 22px;
+  position: absolute;
+  top: 15px;
+  right: 3px;
+  transition: transform 0.3s;
 }
 
 .header__wrap {
@@ -262,7 +295,7 @@ p {
   background-size: cover;
   height: 640px;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 560px) {
   .main-image {
     background: url("/ootomi-kensetsu/img/main-pc.jpg") center/cover;
     background-position: center;
@@ -385,28 +418,25 @@ p {
     margin-top: 0;
   }
 }
-.content-business__list .list-link {
-  display: block;
-}
-.content-business__list .list-link .list-item-img {
+.content-business__list .business__list-item .list-item-img {
   display: block;
   width: 100%;
   height: 192px;
   overflow: hidden;
 }
-.content-business__list .list-link .list-item-img .item-img {
+.content-business__list .business__list-item .list-item-img .item-img {
   width: 100%;
 }
-.content-business__list .list-link .business__definition-list {
+.content-business__list .business__list-item .business__definition-list {
   padding: 35px 15px;
   text-align: center;
 }
-.content-business__list .list-link .business__definition-list .business__definition__title {
+.content-business__list .business__list-item .business__definition-list .business__definition__title {
   font-size: 1.125em;
   color: #53585c;
   font-weight: bold;
 }
-.content-business__list .list-link .business__definition-list .business__definition__text {
+.content-business__list .business__list-item .business__definition-list .business__definition__text {
   font-size: 0.875em;
   color: #6f7579;
   margin-top: 10px;
@@ -419,6 +449,7 @@ p {
 @media screen and (min-width: 1000px) {
   .works-content__wrap {
     background: url("/ootomi-kensetsu/img/bg-works-pc.png") no-repeat 50% 100%;
+    margin-bottom: 0;
     background-attachment: fixed;
   }
 }
