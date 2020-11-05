@@ -21,8 +21,6 @@ $(function() {
   });
 });
 
-
-
 //パララックス
 var rellax = new Rellax('.rellax', {
   center: true,
